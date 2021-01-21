@@ -8,6 +8,7 @@ download_pkgs(
     image_tar = "@openjdk_11_slim//image",
     packages = [
         "wget",
+        "curl",
     ],
 )
 install_pkgs(
