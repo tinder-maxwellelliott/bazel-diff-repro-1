@@ -4,9 +4,12 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_jar")
 
 http_jar(
     name = "bazel_diff",
+    integrity = "sha256-eUN5D2kK1RFUk9qElTcsifeJWwkzTLT+5RdKjyE2VN0=",
     urls = [
-        "https://github.com/Tinder/bazel-diff/releases/download/2.1.4/bazel-diff_deploy.jar",
+        "https://github.com/Tinder/bazel-diff/releases/download/5.0.0/bazel-diff_deploy.jar",
     ],
-    sha256 = "6c2a6e16db10db79837a74bfaa2a101461cd0330598fb1dc54778a86057eb131",
 )
 
+load("//3rdparty/scuttle:scuttle.bzl", "scuttle_repositories")
+
+scuttle_repositories()
