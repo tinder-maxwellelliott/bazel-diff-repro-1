@@ -5,3 +5,8 @@ java_binary(
     main_class = "com.bazel_diff.BazelDiff",
     runtime_deps = ["@bazel_diff//jar"],
 )
+
+filegroup(
+    name = "yo",
+    srcs = ["@scuttle//:bin"]
+)

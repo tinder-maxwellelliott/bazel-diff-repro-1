@@ -10,3 +10,6 @@ http_jar(
     sha256 = "6c2a6e16db10db79837a74bfaa2a101461cd0330598fb1dc54778a86057eb131",
 )
 
+load("//3rdparty/scuttle:scuttle.bzl", "scuttle_repositories")
+
+scuttle_repositories()
