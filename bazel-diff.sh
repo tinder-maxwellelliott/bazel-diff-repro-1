@@ -25,7 +25,7 @@ if [ "${BAZEL_DIFF_DISABLE_WORKSPACE:-false}" = "true" ]; then
   bazel_diff_flags="-so --enable_workspace=false --excludeExternalTargets"
 fi
 
-"$bazel_path" run $bazel_flags :bazel-diff --script_path="$bazel_diff"
+"$bazel_path" run $bazel_flags @bazel-diff//cli:bazel-diff --script_path="$bazel_diff"
 
 git -C "$workspace_path" checkout "$previous_revision" --quiet
 
